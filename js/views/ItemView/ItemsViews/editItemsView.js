@@ -172,6 +172,8 @@ $("#mrp").val("");
 $("#tamilName").val("");
 $("#BrandName").val("");
 $("#Description").val("");
+$("#GroupName").val("");
+$("#UnitName").val("");
 $("#itemImage").attr("src", "images/sabari.png");
 
 
@@ -281,6 +283,8 @@ $("#price").val(option_data[0].Products[0].Price);
 $("#stockavailable").val(option_data[0].Products[0].IsStockAvailable);
 $("#displayProduct").val(option_data[0].Products[0].ToShow);
 $("#Description").val(option_data[0].Products[0].Description);
+$("#GroupName").val(option_data[0].Products[0].GroupName);
+$("#UnitName").val(option_data[0].Products[0].UnitName);
 //$("#search-resulit").val("");
           //formModal.set(option_data[0]);
           //console.log(formModal.toJSON())

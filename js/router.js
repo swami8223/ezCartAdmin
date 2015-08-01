@@ -25,17 +25,17 @@ var initialize =  function(){
    var homeView,itemView,notify,orderView,orderSheetView,loginView,reportView,shopView;
 
 
- setInterval( function(){ 
+//  setInterval( function(){ 
 
-$.ajax({
-  type: "POST",
-  url: "http://shoppingcartwebapi.4maven.com/Menu/GetAdminMenu/0",
-  context: document.body
-}).done(function() {
+// $.ajax({
+//   type: "POST",
+//   url: "http://shoppingcartwebapi.4maven.com/Menu/GetAdminMenu/0",
+//   context: document.body
+// }).done(function() {
 
-});
+// });
 
- }, 30000);
+//  }, 30000);
 
 
 
