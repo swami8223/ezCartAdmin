@@ -1,0 +1,33 @@
+
+<table class="tg">
+  <tr>
+    <th class="tg-031e">SI.No</th>
+    <th class="tg-031e">Product Name</th>
+    <th class="tg-031e">Brand Name</th>
+    <th class="tg-031e">Selling Price</th>
+    <th class="tg-031e">MRP</th>
+    <th class="tg-031e">Last Modified</th>
+    <th class="tg-031e">Under Menu</th>
+  
+  </tr>
+
+
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.ProductList, function(option_data, index){ %>
+
+
+    <tr>
+    <th class="tg-031e"> <%= index+1 %></th>
+    <th class="tg-031e"> <%= option_data.ProductName%></th>
+    <th class="tg-031e"><%= option_data.BrandName%></th>
+    <th class="tg-031e"><%= option_data.SellingPrice%></th>
+    <th class="tg-031e"><%= option_data.Mrp%></th>
+    <th class="tg-031e"><%= option_data.LastModified%></th>
+    <th class="tg-031e"><%= option_data.UnderMenu%></th>
+
+  </tr>
+  
+
+  <% }) ;%>
+  <% }) ;%>
+</table>

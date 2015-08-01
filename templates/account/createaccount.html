@@ -1,0 +1,59 @@
+<section class="signupContainer">
+
+<h1>CreateUser</h1>
+ <form id="signupform" class="signupform">
+  <div class="one_half">
+  <label class="blk pad10">First Name</label>
+<input id="Name" type="name" required name ="FirstName" class="input-box " placeholder = "First Name *"></input>
+</div>
+ <div class="one_half">
+  <label class="blk pad10">Last Name</label>
+<input id="Name" type="name" required name = "LastName" class="input-box " placeholder = "Last Name *"></input>
+</div>
+<div class="one_half">
+  <label class="blk pad10"> PhoneNumber</label>
+<input  id="PhoneNumber" maxlength="10" required type="PhoneNumber" name = "MobileNo"  class="input-box" placeholder = "PhoneNumber" ></input> 
+</div>
+<div class="one_half">
+ <label class="blk pad10"> MailId</label>
+<input  id="EmailId" required type="mail" name = "Email_Id"  class="input-box" placeholder = "MailId " ></input> 
+</div>
+
+<div class="one_half">
+ <label class="blk pad10"> Password</label>
+<input  id="password"   maxlength="5" required type="password" name = "Password"  class="input-box" placeholder = "password"></input> 
+</div>
+
+<div class="one_half">
+ <label class="blk pad10">Re-Password</label>
+<input  id="re-password"  maxlength="5"  required type="password" name = " Re-Password"  class="input-box" placeholder = "Re-Password"></input> 
+</div>
+
+<div class="one_half">
+ <label class="blk pad10">Role</label>
+<select required id="role"   name = "Role"  class="input-box"  >
+<optgroup>
+<!-- <option value="" disabled="">Select User Roll</option> -->
+<option value="user">user</option>
+<option value="super">super</option>
+<option value="admin">admin</option>
+
+</optgroup>
+
+</select> 
+</div>
+
+<div class="one_half">
+ <label class="blk pad10">Gender</label>
+<input type="radio" name="Gender" checked value="Male">Male
+<input type="radio" name="Gender" value="Female">Female
+</div>
+
+</form>
+<input type="button" class="red button fl_right signUpbtn" value="submit" style="margin:10px 20px" ></input>
+
+
+</section>
+<div class="error"></div>
+
+</div>

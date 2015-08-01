@@ -1,0 +1,18 @@
+<h2>AdminMapped for this shop</h2>
+<ul>
+	
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.AdminList, function(option_data, index){ %>
+<li>UserId:<%= option_data.UserId %></li>
+<% }) ;%>
+<% }) ;%>
+</ul>
+
+
+
+<div>
+<input id="search_admin" type="text" name = "adminSearch" class="input-box fl_left" placeholder = "searchAdmin"></input>
+
+</div>
+
+<div id="adminResult"></div>

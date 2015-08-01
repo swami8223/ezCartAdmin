@@ -1,0 +1,16 @@
+
+    <% _.each(optionItem, function(option_data, index){ %>
+
+<% for(var key in  option_data.ProductSearchResult.ProductsStructure){%>    
+ <li class="searchCategory1"> <a> <%= key %></a>
+            <ul class="searchCategory2">
+         <% _.each(option_data.ProductSearchResult.ProductsStructure[key].Products, function(category, index){%>
+      
+             <li><a id ="<%= category.ProductId %>"><%= category.ProductName %></a></li>
+           <% });%>
+         </ul>
+    </li>
+     <% }%>
+
+
+   <% }) ;%>

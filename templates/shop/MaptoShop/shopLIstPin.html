@@ -1,0 +1,34 @@
+<h2>Map Shop List to Pin</h2>
+<div id="maptoPin">
+<select id="retriveData">
+	<optgroup>
+
+
+		<option selected="selected" disabled="disabled" value="Yes"> Select Shop</option>
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.ShopList, function(option_data, index){ %>
+<option value = "<%= option_data.BranchId %>" > <%= option_data.BranchName %> </option>
+ <% }) ;%>
+  <% }) ;%>
+  	</optgroup>
+  </select>
+
+
+<h2>Add Pin code</h2>
+
+
+<form class="border m-top updateformPIn">
+<h2>Branch ID <span class="branchid">Select Branch</span></h2>
+<span>pincode</span>
+<input name="BranchId" class="branchIdadd" type="hidden"></input>
+<input name="Pincode" class="addpincode addpincode"  maxlength="6" placeholder="pincode" type="pincode" ></input>
+<span  class="radioText">Blocked</span>
+<input name="Block" class="blocked" type="radio" name="sex" value="Y">
+<span  class="radioText">Not-Blocked</span>
+<input name="Block"  type="radio" checked="true" value="N">
+<input class="button red gradient size-20  fl_right updatePin" type="button" value="Add"></input>
+</form>
+
+  <section id="BlockedInfo"></section>
+  <section id="MapshopToPin"></section>
+  </div>

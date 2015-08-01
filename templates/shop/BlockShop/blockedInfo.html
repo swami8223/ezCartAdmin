@@ -1,0 +1,31 @@
+<ul class="block_shoplist">
+<% _.each(optionItem, function(option_data, index){ %>
+
+<li><p class="one_third">Shop name: </p><%=option_data.ShopDetail.ShopName%></li>
+<li><p class="one_third">BranchId:</p><%=option_data.ShopDetail.BranchId%></li>
+<li><p class="one_third">BranchName:</p><%=option_data.ShopDetail.BranchName%></li>
+<li><p class="one_third">Street1:</p><%=option_data.ShopDetail.Street1%></li>
+<li><p class="one_third">Street2:</p><%=option_data.ShopDetail.Street2%></li>
+<li><p class="one_third">Pincode:</p><%=option_data.ShopDetail.Pincode%></li>
+<li><p class="one_third">MobileNo:</p><%=option_data.ShopDetail.MobileNo%></li>
+<br><li><p class="one_third">AreaCode:</p><%=option_data.ShopDetail.AreaCode%></li>
+<li><p class="one_third">PhoneNo:</p><%=option_data.ShopDetail.PhoneNo%></li>
+<li><p class="one_third">City:</p><%=option_data.ShopDetail.City%></li>
+<li><p class="one_third">MaxDeliveryDistance:</p><%=option_data.ShopDetail.MaxDeliveryDistance%></li>
+<li><p class="one_third">BlockOrder:</p> <p class="blockstatus"><%=option_data.ShopDetail.BlockOrder%></p></li>
+<li><p class="one_third">Longitude:</p><%=option_data.ShopDetail.Longitude%></li>
+<li><p class="one_third">Latitude:</p><%=option_data.ShopDetail.Latitude%></li>
+<li><p class="one_third">State:</p><%=option_data.ShopDetail.State%></li>
+<li><p class="one_third">Country:</p><%=option_data.ShopDetail.Country%></li>
+ 
+<%
+
+if(option_data.ShopDetail.BlockOrder == "N"){ %>
+ <input id="blockStore" blockStatus="Y" blockid=<%=option_data.ShopDetail.BranchId%> type="button" value="block" class="button red gradient size-50 pull-left  one_half "></input>
+ <% }%>
+ <%if(option_data.ShopDetail.BlockOrder == "Y"){ %>
+  <input id="unBlockStore" blockStatus="N" blockid=<%=option_data.ShopDetail.BranchId%> type="button" value="Unblock" class="button red gradient size-50 pull-left  one_half"></input>
+   <% }%>
+  <% }) ;%>
+
+</ul>

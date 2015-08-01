@@ -1,0 +1,91 @@
+
+<h1>CreateItem</h1>
+<div>
+<h2 class= "dummy clear" >Search Product</h2>
+<div class="searchDiv ">
+	<label class="blk">Product Search</label>
+	<input required id="search-resulit" placeholder="Product search" type="text" class="fl_left product-search input-box"></input>
+	<input  id="search-id" type="hidden">
+    <ul class="searchResults">
+    	 </ul>
+ 
+</div>
+
+
+
+<h3 class="clear"> Product Create</h3>
+	<div class="fl_right width180"><p class=""> Item Image</p>
+	<img id="itemImage" class="itemImage showtext" src="images/sabari.png"></img>
+</div>
+<form id="create-editForm">
+	<label class="blk"> Product Name</label>
+<input id="product_name" type="text" required name = "ProductName" class="input-box" placeholder = "Product Name *"></input>
+	<label class="blk"> Product Id</label>
+<input  id="product_id" type="number" name = "ProductId"  class="input-box" placeholder = "Product ID" id=""></input> 
+
+<label class="blk">Select Menu </label>
+<select  required id="selectmenu" type="select" name = "MenuName" class="input-box" placeholder = "Menu" id="">
+	<optgroup>
+     <option 	disabled="disabled" value=""> Select Menu </option>
+ 
+
+ <% _.each(optionItem, function(option_data, index){ %>
+
+<%if(option_data.Menu){_.each(option_data.Menu, function(option_data, index){ %>
+
+<option value="<%= option_data.MenuName.split('>')[1] %>"><%= option_data.MenuName %> </option>
+
+
+  <% });}%>
+  <% }) ;%>
+
+
+
+    </optgroup>
+</select> 
+<label class="blk">Price</label>
+<input id="price"  name = "Price" type="number" class="input-box" placeholder = "Price *" id="" required></input> 
+<label class="blk">mrp</label>
+<input id="mrp"  name = "mrp" type="number" class="input-box" placeholder = "MRP *" id="" required></input> 
+<label class="blk">Tamil Name</label>
+<input id="tamilName" type="text"  name = "tamilname" class="input-box" placeholder = "tamilName *" id="" required></input> 
+<label class="blk">Brand Name</label>
+<input id="BrandName"  type="text" name = "BrandName" class="input-box" placeholder = "BrandName *" id="" required></input> 
+
+
+<label class="blk">Is Stock Available ?</label>
+<select  required  type="select" id="stockavailable" name = "IsStockAvailable" class="input-box"  id="">
+<optgroup>
+	<option 	disabled="disabled" value=""> Is Stock Available </option>
+<option value="Y"> Yes </option>
+<option value="N"> No </option>
+</optgroup>
+</select> 
+
+
+
+<label class="blk">Display Product ? </label>
+<select type="select" required id="displayProduct" name = "ToShow" class="input-box"  id="">
+<optgroup >
+
+<option 	disabled="disabled" value=""> Display Product </option>
+<option value="Y"> Yes </option>
+<option value="N"> No </option>
+</optgroup>
+</select> 
+<label class="blk">Description</label>
+<textarea type="text" id="Description" class="textareas input-box" name="Description" placeholder="Description"></textarea>
+<label class="blk">GroupName</label>
+<input id="GroupName"  type="text" name = "GroupName" class="input-box" placeholder = "GroupName *" id="" required></input> 
+<label class="blk">UnitName</label>
+<input id="UnitName"  type="text" name = "UnitName" class="input-box" placeholder = "UnitName *" id="" required></input> 
+
+<input type="submit"  id="create-item" class="button red gradient size-50 pull-left  one_half" value="Create Item"></input>
+
+</form>
+
+	<div id="projects-list"></div>
+
+</div>	
+<div class="sidebar"></div>
+

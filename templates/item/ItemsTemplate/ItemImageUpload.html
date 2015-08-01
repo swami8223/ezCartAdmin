@@ -1,0 +1,23 @@
+ <div>
+<h1>Product image upload</h1>
+
+<div><p>Please upload with correct image name matching product ID </p> </br>
+</br></div>
+
+ <form  target="hidden-form" class="fileForm" id="productImg" action="http://shoppingcartwebapi.4maven.com/Product/ChangeProductImage" enctype="multipart/form-data" name="input" method="post" >
+
+ <div class="fileinput">
+	<input id="inputImg" multiple name="Files" type="file" class="one_half" required=""  onchange="Global.fileSubmit(this)">
+	<input type="reset" style="display:none" class="one_third button red gradient Clear hidden" value="clear" onclick="Global.resetForm()">
+	<input type="submit" style="display:none" class="one_third button red gradient submitFile hidden" value="submit">
+
+</div>
+</form>
+
+<div class="uploadimgDiv">
+<div class="uploadImgBlock"></div>	
+</div>  
+  
+
+</div>
+<IFRAME id="foo"   src="" name="hidden-form"></IFRAME>

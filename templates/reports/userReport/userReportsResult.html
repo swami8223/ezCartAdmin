@@ -1,0 +1,42 @@
+<table class="tg">
+  <tr>
+    <th class="tg-031e">SI.No</th>
+    <th class="tg-031e">userID</th>
+    <th class="tg-031e">User Role</th>
+    <th class="tg-031e">First Name</th>
+    <th class="tg-031e">Last Name</th>
+    <th class="tg-031e">Mobile No</th>
+      <th class="tg-031e">Address</th>
+       <th class="tg-031e">LastLogin</th>
+        <th class="tg-031e">IsBlocked</th>
+
+
+  </tr>
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.Users, function(option_data, index){ %>
+<tr>
+  <th class="tg-031e"> <%= index+1 %></th>
+	 <th class="tg-031e"><%= option_data.UserId%></th>
+    <th class="tg-031e"><%= option_data.Role%></th>
+    <th class="tg-031e"><%= option_data.PersonalInfo.FirstName%></th>
+    <th class="tg-031e"><%= option_data.PersonalInfo.LastName%></th>
+    <th class="tg-031e"><%= option_data.PersonalInfo.MobileNo%></th>
+      <th class="tg-031e"><%=option_data.UserAddress.Street1%> <%=option_data.UserAddress.Street2%>
+<%=option_data.UserAddress.City%> <%=option_data.UserAddress.State%> <%=option_data.UserAddress.Pincode%>
+      </th> 
+      <th class="tg-031e"><%= option_data.LastLogin%></th> 
+      <th class="tg-031e"><%= option_data.IsBlocked%></th> 
+  </tr>
+
+<!-- <h2 class="userID"><%= option_data.UserId%></h2>
+<ul  class="clear userReportDetails">
+<li>User Role:<b></b></li>
+<li>First Name:<b><%= option_data.PersonalInfo.FirstName%></b></li>
+<li>Last Name:<b><%= option_data.PersonalInfo.LastName%></b></li>
+<li>Mobile No:<b><%= option_data.PersonalInfo.MobileNo%></b></li>
+<li>Password :<b><%= option_data.Password%></b></li>
+</ul> -->
+
+  <% }) ;%>
+  <% }) ;%>
+</table>

@@ -1,0 +1,25 @@
+<ul id = "itemMenu" class="clear itemMenu menuItem">
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.Menu, function(option_data, index){ %>
+<li   id='menu-<%= option_data.MenuId %>' class="">
+<a  href= "#/menu-<%= option_data.MenuId %>" title='<%= option_data.MenuId %>'><%= option_data.MenuName%></a>
+<% if(index >= 1){ %>
+
+<ul>
+<li   id='menu-<%= option_data.MenuId %>' class="">
+<a  href= "#/menu-<%= option_data.MenuId %>-a" title='<%= option_data.MenuId %>'>Create <%= option_data.MenuName%></a>
+</li>
+<li   id='menu-<%= option_data.MenuId %>' class="">
+<a  href= "#/menu-<%= option_data.MenuId %>-b" title='<%= option_data.MenuId %>'>Edit <%= option_data.MenuName%></a>
+</li>
+<li   id='menu-<%= option_data.MenuId %>' class="">
+<a  href= "#/menu-<%= option_data.MenuId %>-c" title='<%= option_data.MenuId %>'>Image Upload</a>
+</li>
+
+</ul>
+<% } %>
+
+</li>
+  <% }) ;%>
+  <% }) ;%>
+</ul>

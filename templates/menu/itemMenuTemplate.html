@@ -1,0 +1,9 @@
+<ul id = "itemMenu" class="clear itemMenu">
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.Menu, function(option_data, index){ %>
+<li   id='menu-<%= option_data.MenuId %>' class="">
+<a  href= "#/menu-<%= option_data.MenuId %>" title='<%= option_data.MenuId %>'><%= option_data.MenuName%></a>
+</li>
+  <% }) ;%>
+  <% }) ;%>
+</ul>

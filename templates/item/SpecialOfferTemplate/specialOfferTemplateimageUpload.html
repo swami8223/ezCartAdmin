@@ -1,0 +1,19 @@
+
+<h1>Image Upload</h1>
+<div class="offerForm">
+
+<form  target="hidden-form" class="fileForm" id="OfferImg" action="http://shoppingcartwebapi.4maven.com/Offer/ChangeOfferImage" enctype="multipart/form-data" name="input" method="post" >
+   <label class="blk">Offer Image</label>
+ <div class="fileinput">
+	<input  id="inputImg" multiple name="Files" type="file" class="one_half" required=""  onchange="Global.fileSubmit(this)">
+<input type="reset" style="display:none" class="one_third button red gradient Clear hidden" value="clear" onclick="Global.resetForm()"></input>
+	<input type="submit" style="display:none" class="one_third button red gradient submitFile hidden" value="submit"></input>
+
+</div>
+</form>
+<IFRAME id="foo"  src="" name="hidden-form"></IFRAME>
+<div class="uploadimgDiv">
+<div class="uploadImgBlock"></div>	
+</div> 
+	
+

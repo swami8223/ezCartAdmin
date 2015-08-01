@@ -1,0 +1,21 @@
+<h1>ADMIN DETAILS</h1>
+
+<ul>
+	
+<% _.each(optionItem, function(option_data, index){ %>
+<% if(option_data.Users !== undefined ) { %>
+<% _.each(option_data.Users, function(option_data, index){ %>
+
+
+<li class="adminDetailsList" admindetails="<%= option_data.UserId %> ">
+
+ <p  class="fl_left" ><b class="red">UserId</b>:<%= option_data.UserId %> </p>
+ <a id="adddAdmin" class="red fl_left underline">Add as admin</a>
+</li>
+<% }); %>
+<% }else  {%>
+<li>UserId:No User</li>
+
+<% };%>
+<% }) ;%>
+</ul>

@@ -1,0 +1,44 @@
+
+<table class="tg">
+  <tr>
+    <th class="tg-031e"> SI.No</th>
+    <th class="tg-031e">InvoiceCount</th>
+    <th class="tg-031e">UserCount</th>
+    <th class="tg-031e">TotalCost</th>
+    <th class="tg-031e">Delivered Count</th>
+    <th class="tg-031e">Invoice Amount</th>
+    <th class="tg-031e">Pending Count</th>
+    <th class="tg-031e">Pending Amount</th>
+        <th class="tg-031e">Deffered Cont</th>
+    <th class="tg-031e">Deffered Amount</th>
+    <th class="tg-031e">CancelCount</th>
+     <th class="tg-031e">CancelAmount</th>
+  
+  </tr>
+
+
+<% _.each(optionItem, function(option_data, index){ %>
+
+
+
+    <tr>
+    <th class="tg-031e"> <%= index+1 %></th>
+    <th class="tg-031e"> <%= option_data.SalesReport.InvoiceCount%></th>
+    <th class="tg-031e"><%= option_data.SalesReport.UserCount%></th>
+    <th class="tg-031e"><%= option_data.SalesReport.TotalCost%></th>
+    <th class="tg-031e"><%= option_data.SalesReport.DeliveredInvoiceCount%></th>
+    <th class="tg-031e"><%= option_data.SalesReport.DeliveredInvoicePaymentAmount%></th>
+    <th class="tg-031e"><%= option_data.SalesReport.PendingOrderCount %></th>
+        <th class="tg-031e"><%= option_data.SalesReport.PendingOrderAmount%></th>
+    <th class="tg-031e"><%= option_data.SalesReport.DefferedPaymentCont%></th>
+    <th class="tg-031e"><%= option_data.SalesReport.DefferedPaymentAmount %></th>
+           <th class="tg-031e"><%= option_data.SalesReport.CancelOrderCount%></th>
+    <th class="tg-031e"><%= option_data.SalesReport.CancelOrderAmount%></th>
+
+
+  </tr>
+  
+
+
+  <% }) ;%>
+</table>

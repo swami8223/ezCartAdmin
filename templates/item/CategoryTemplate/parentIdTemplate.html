@@ -1,0 +1,20 @@
+<label class="blk">Parent Menu Name</label>
+<select  required id="selectParentMenu" name = "MenuName" class="input-box" placeholder = "Menu" id="">
+	<optgroup>
+     <option 	disabled="disabled" value="Yes"> Select Menu </option>
+ 
+
+ <% _.each(optionItem, function(option_data, index){ %>
+
+<%if(option_data.Menu){_.each(option_data.Menu, function(option_data, index){ %>
+
+<option toshow="" value="<%= option_data.MenuId%>"><%= option_data.MenuName %> </option>
+
+
+  <% });}%>
+  <% }) ;%>
+
+
+
+    </optgroup>
+</select> 

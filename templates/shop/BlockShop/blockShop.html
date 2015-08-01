@@ -1,0 +1,15 @@
+<h2>Block Shops</h2>
+<div id="blockShop">
+<select id="retriveData">
+	<optgroup>
+	<option selected="selected" disabled="disabled" value="Yes"> Select Shop</option>
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.ShopList, function(option_data, index){ %>
+<option value = "<%= option_data.BranchId %>" > <%= option_data.BranchName %> </option>
+ <% }) ;%>
+  <% }) ;%>
+</optgroup>
+  </select>
+  <section id="BlockedInfo"></section>
+  <section id="MapshopToPin"></section>
+  </div>

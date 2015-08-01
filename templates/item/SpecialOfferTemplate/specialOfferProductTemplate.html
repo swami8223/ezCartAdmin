@@ -1,0 +1,39 @@
+<div id = "" class="ProductDiv">
+<% _.each(option_item, function(option_data, index){ %>
+<% _.each(option_data.Products, function(OfferProduct, index){ %>
+
+<h3><%=OfferProduct.ProductName%>
+<span class="red"> <%=OfferProduct.Price%> Rs</span>
+<a class="remove blue fl_right"> remove</a><span class="product-id samll-font fl_right purple">ProductID:
+<span><%=OfferProduct.ProductId%></span></span></h3>
+<ul class="price-div">
+<li class="fl_left one_third nogutter">
+<label class="blk">
+Offer Price 
+</label>
+<input  required  class="offer-price small-box" ></input>
+</li>
+<li class="fl_left one_third nogutter">
+<label class="blk">
+Qty
+</label>
+<input  required  class="offer-qty small-box" ></input>
+</li>
+<li class="fl_left one_third nogutter">
+<label class="blk">
+Actual Proce
+</label>
+<span class="calc-price small-text">0</span>
+</li>
+</ul>
+
+
+  <% }) ;%>
+  <% }) ;%>
+
+
+
+</ul>
+
+
+

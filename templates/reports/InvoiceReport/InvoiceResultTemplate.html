@@ -1,0 +1,43 @@
+
+<table class="tg">
+  <tr>
+    <th class="tg-031e">InvoiceNo.No</th>
+    <th class="tg-031e">InvoiceDate</th>
+    <th class="tg-031e">InvoiceAmount</th>
+    <th class="tg-031e">ReceivedAmount</th>
+    <th class="tg-031e">PaymentType</th>
+    <th class="tg-031e">UserId</th>
+    <th class="tg-031e">UserName</th>
+    <th class="tg-031e">ShipmentType</th>
+    <th class="tg-031e">OrderStatus</th>
+    <th class="tg-031e">CancelRemark</th>
+    <th class="tg-031e">IsCanceled</th>
+   
+  
+  </tr>
+
+
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.InvoiceList, function(option_data, index){ %>
+
+
+  <tr>
+   
+    <th class="tg-031e"> <%= option_data.InvoiceNo %></th>
+    <th class="tg-031e"> <%= option_data.InvoiceDate%></th>
+    <th class="tg-031e"><%= option_data.InvoiceAmount%></th>
+    <th class="tg-031e"><%= option_data.ReceivedAmount%></th>
+    <th class="tg-031e"><%= option_data.PaymentType%></th>
+    <th class="tg-031e"><%= option_data.UserId%></th>
+    <th class="tg-031e"><%= option_data.UserName%></th>
+    <th class="tg-031e"><%= option_data.ShipmentType%></th>
+    <th class="tg-031e"><%= option_data.OrderStatus%></th>
+    <th class="tg-031e"><%= option_data.CancelRemark%></th>
+    <th class="tg-031e"><%= option_data.IsCanceled%></th>
+
+  </tr>
+  
+
+  <% }) ;%>
+  <% }) ;%>
+</table>

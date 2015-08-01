@@ -1,0 +1,144 @@
+<div  id="gallery">
+
+
+
+      <section>
+        <figure>
+          <h2 > Welcome Admin</h2>
+<!--       <div id="user" class="user">
+       <button class="red button fl_right" id="manageUser" value="Add User">Manage User</button>
+       <div class="userBlock">
+ <ul class="normalFont userBLockshow">
+<li id="addUser"  >add User</li>
+<li id="deleteUser"  >delete User</li>
+ </ul>
+       </div>
+     </div> -->
+          <ul class="clear">
+
+            <% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.Menu, function(option_data, index){ %>
+<li   menuid="<%= option_data.MenuId %>" class="one_third "><article class="clear">
+ 
+
+<!-- after updating Picture add this 
+  <a href='#/menu-<%= option_data.MenuId %>'><img  class="post-image"   src="images/Menuicon/<%= option_data.MenuId %>.png" alt=""></a> !-->
+
+<a href='#/menu-<%= option_data.MenuId %>'><img  class="post-image"   src="images/Menuicon/6.png" alt=""></a> 
+ <h3> <%= option_data.MenuName%> </h3>
+</article></li>
+  <% }) ;%>
+  <% }) ;%>
+          </ul>
+        </figure>
+      </section>
+<!-- SIGNU BLOCK -->
+<section class="signupBLock addUser">
+     <section id="curtain" >
+     
+       
+
+     </section> 
+<div class="signupPage shadowWhite">
+  <div class="pad10">
+    <header  class="underline">
+      <h2 class="boldFont fl_left red font-large " style="margin:0 0 0 45%">Sign up</h2> 
+ <span class="close red fl_right bold cursor font-small">CLOSE</span>
+    </header>
+<section class="signupContainer">
+
+ <form id="signupform" class="signupform">
+  <div class="one_half">
+  <label class="blk pad10">First Name</label>
+<input id="Name" type="name" required name ="FirstName" class="input-box " placeholder = "First Name *"></input>
+</div>
+ <div class="one_half">
+  <label class="blk pad10">Last Name</label>
+<input id="Name" type="name" required name = "LastName" class="input-box " placeholder = "Last Name *"></input>
+</div>
+<div class="one_half">
+  <label class="blk pad10"> PhoneNumber</label>
+<input  id="PhoneNumber" maxlength="10" required type="PhoneNumber" name = "MobileNo"  class="input-box" placeholder = "PhoneNumber" ></input> 
+</div>
+<div class="one_half">
+ <label class="blk pad10"> MailId</label>
+<input  id="EmailId" required type="mail" name = "Email_Id"  class="input-box" placeholder = "MailId " ></input> 
+</div>
+
+<div class="one_half">
+ <label class="blk pad10"> Password</label>
+<input  id="password"   maxlength="5" required type="password" name = "Password"  class="input-box" placeholder = "password"></input> 
+</div>
+
+<div class="one_half">
+ <label class="blk pad10">Re-Password</label>
+<input  id="re-password"  maxlength="5"  required type="password" name = " Re-Password"  class="input-box" placeholder = "Re-Password"></input> 
+</div>
+
+<div class="one_half">
+ <label class="blk pad10">Role</label>
+<select required id="role"   name = "Role"  class="input-box"  >
+<optgroup>
+<!-- <option value="" disabled="">Select User Roll</option> -->
+<option value="user">user</option>
+<option value="super">super</option>
+<option value="admin">admin</option>
+
+</optgroup>
+
+</select> 
+</div>
+
+<div class="one_half">
+ <label class="blk pad10">Gender</label>
+<input type="radio" name="Gender" checked value="Male">Male
+<input type="radio" name="Gender" value="Female">Female
+</div>
+
+</form>
+<input type="button" class="red button fl_right signUpbtn" value="submit" style="margin:10px 20px" ></input>
+
+
+</section>
+<div class="error"></div>
+
+</div>
+       </div>
+     </section>
+
+     <!-- SIGNU Block -->
+
+<section class="signupBLock deleteUser">
+     <section id="curtain" >
+     
+       
+
+     </section> 
+<div class="signupPage shadowWhite">
+  <div class="pad10">
+    <header  class="underline">
+      <h2 class="boldFont fl_left red font-large " style="margin:0 0 0 45%">Delete User</h2> 
+ <span class="close red fl_right bold cursor font-small">CLOSE</span>
+    </header>
+<section class="signupContainer">
+
+
+  <div class="one_half">
+  <label class="blk pad10">UserNmae</label>
+<input id="Name" type="text" required name = "Name" class="input-box " placeholder = "UserNmae"></input>
+</div>
+
+
+</section>
+
+
+</div>
+       </div>
+     </section>
+
+
+
+</div>
+
+    <div class="clear"></div>
+  </div>

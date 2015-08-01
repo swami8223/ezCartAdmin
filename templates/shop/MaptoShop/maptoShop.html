@@ -1,0 +1,23 @@
+<section>
+	
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.PincodeList, function(option_data, index){ %>
+
+<h2>Update Pin code</h2>
+<form class="border m-top updateformPIn">
+	<h2>Branch Id :<%=$("#retriveData").val()%> Distance : <%= Math.round(option_data.DistanceToShopInMeter/1000) %> Kms</h2>
+
+<span>pincode</span>
+<input name="BranchId" type="hidden" value="<%=$('#retriveData').val()%>"></input>
+<input class="pincodedevalue addpincode" maxlength="6" name="Pincode" type="pincode"  placeholder="pincode"  value="<%=option_data.Pincode %>"></input>
+<span  class="radioText">Blocked</span>
+<input name="Block" class="blocked" type="radio" name="sex" value="Y">
+<span  class="radioText">Not-Blocked</span>
+<input name="Block"  type="radio" checked="true" value="N">
+<input class="button red gradient size-20  fl_right updatePin" type="button" value="update"></input>
+</form>
+
+  <% }) ;%>
+  <% }) ;%>
+
+</section>

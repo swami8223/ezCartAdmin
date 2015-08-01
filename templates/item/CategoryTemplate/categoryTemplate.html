@@ -1,0 +1,69 @@
+<div><h2>Category</h2>
+	
+<form  target="hidden-form" class="fileForm" id="MenuImg" action="http://shoppingcartwebapi.4maven.comMenu/ChangeMenuImage" enctype="multipart/form-data" name="input" method="post" >
+   <label class="blk">Menu Image</label>
+ <div class="fileinput">
+	<input id="inputImg" multiple name="Files" type="file" class="one_half" required=""  onchange="Global.fileSubmit(this)">
+	<input type="reset" style="display:none" class="one_third button red gradient Clear hidden" value="clear" onclick="Global.resetForm()"></input>
+	<input type="submit" style="display:none" class="one_third button red gradient submitFile hidden" value="submit"></input>
+
+</div>
+</form>
+<IFRAME id="foo" style="display:none"  src="" name="hidden-form"></IFRAME>
+<div class="uploadimgDiv">
+<div class="uploadImgBlock"></div>	
+</div> 
+
+<img id="categoryImage" class="categoryImage fl_right width180" src="images/sabari.png"></img>
+<label class="blk">Select Menu </label>
+<select  required id="selectmenu" name = "MenuName" class="input-box" placeholder = "Menu" id="">
+	<optgroup>
+     <option 	disabled="disabled" value="Yes"> Select Menu </option>
+ 
+
+ <% _.each(optionItem, function(option_data, index){ %>
+
+<%if(option_data.Menu){_.each(option_data.Menu, function(option_data, index){ %>
+
+<option toshow="" value="<%= option_data.MenuName.split('>')[1]%>$<%=option_data.ToShow%>$<%=option_data.MenuId%>$<%=option_data.ImageUrl%>$<%=option_data.ParentId%>$<%=option_data.TabIndex%>" ><%= option_data.MenuName %> </option>
+
+
+  <% });}%>
+  <% }) ;%>
+
+
+
+    </optgroup>
+</select> 
+<label class="blk">Menu Name</label>
+<input required id="Menu"  name = "Price" class="input-box" placeholder = "Menu Name *"></input> 
+<label class="blk">Menu Id</label>
+<input  id="MenuId" disabled  name = "Price" class="input-box" placeholder = "Menu Id *"></input> 
+<label class="blk">Index</label>
+<input required id="TabIndex"  name = "Price" class="input-box" placeholder = "Index"></input> 
+<div class="ParentDiv">
+
+</div>
+
+
+<label class="blk">Display Product ? </label>
+<select  required id="displayProduct" name = "ToShow" class="input-box"  id="">
+<optgroup >
+
+<option required value="null"	disabled="disabled" > Display Menu </option>
+<option value="Y"> Yes </option>
+<option value="N"> No </option>
+</optgroup>
+</select> 
+
+<input type="submit"  id="create-menu" class="button red gradient size-50 pull-left  one_half" value="Create Category">
+<input type="submit" id="edit-menu" class="button grey gradient size-50 pull-left one_half" value="Update Category">
+
+
+
+
+
+
+</div>	
+<div class="sidebar"></div>
+

@@ -1,0 +1,16 @@
+<h1>Order By Shop</h1>
+<div id="getShopOrder">
+<select id="retriveData">
+		<optgroup>
+	<option selected="selected" disabled="disabled" value="Yes"> Select Branch</option>
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.ShopList, function(option_data, index){ %>
+<option value = "<%= option_data.BranchId %>" > <%= option_data.BranchName %> </option>
+ <% }) ;%>
+  <% }) ;%>
+</optgroup>
+  </select>
+
+<div id="getShopOrderResult"></div>
+
+</div>

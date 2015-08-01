@@ -1,0 +1,137 @@
+
+<section id="orderSheet" class="orderSheet">
+	<h1>INVOICE DETAILS</h1>
+		<button class="fl_right font-20 pad20 width150 red-btn" onClick="window.print()">print</button>
+<div class="fl_left font-12 pushright20">
+<p class="blue">InVoice No <%=optionItem.Invoice.InvoiceNo %></p>
+<p>UserId : <%=optionItem.Invoice.UserId %></p>
+<p class="blue">Delivery Type : <%=optionItem.Invoice.DeliveryType%></p>
+<p >InvoiceDateTime: <%=optionItem.Invoice.InvoiceDateTime%></p>
+</div>
+<div class="fl_left font-12 pushright20">
+<p >OrderStatus: <%=optionItem.Invoice.OrderStatus%></p>
+<p >PaymentType: <%=optionItem.Invoice.PaymentType%></p>
+<p>BillNo: <%=optionItem.Invoice.BillNo%></p>
+<p >ExpDelDateTime: <%=optionItem.Invoice.ExpDelDateTime%></p>
+</div>
+<div class="fl_left font-12 pushright20">
+<address class="clear">Address:
+	<span><%=optionItem.Invoice.Address.FirstName %>&nbsp;</span>
+	<span><%=optionItem.Invoice.Address.LastName %></span>,</br>
+	<%=optionItem.Invoice.Address.Street1%>,<%=optionItem.Invoice.Address.Street2+","%></br>
+    <%=optionItem.Invoice.Address.City%>,
+    <%=optionItem.Invoice.Address.State%>,
+    <%=optionItem.Invoice.Address.Country%>,</br>
+    <%=optionItem.Invoice.Address.Pincode+"."%></br>
+ 	LandMark :<%=optionItem.Invoice.Address.LandMark == null ? "Not specified" : optionItem.Invoice.Address.LandMark+"</br>"%>
+
+	</address>
+	<b>Phone Number : <%=optionItem.Invoice.Address.MobileNo == null ? "Not specified" : optionItem.Invoice.Address.MobileNo+"</br>"%></b>
+</div>
+
+<table>	
+	<tr>
+<td>ProductId</td>
+<td>ProductName</td>
+<td>Price</td>
+<td>Quantity</td>
+<td>SumPrice</td>
+</tr>
+<% _.each(optionItem.Invoice.Products, function(option_data, index){ %>	
+<tr>
+<td><%=option_data.ProductId%></td>
+<td><%=option_data.ProductName%></td>
+<td><%=option_data.Price%></td>
+<td><%=option_data.Quantity%></td>
+<td><%=option_data.SumPrice%></td>
+</tr>
+  <% }) ;%>
+
+</table>
+
+
+
+
+
+
+<div class="font-14 ">
+	
+<%if(optionItem.Invoice.Offers != undefined){ _.each(optionItem.Invoice.Offers, function(option_data, index){ %>	
+<h2>Offer Products</h2>
+<p class="fl_left">OfferId:<%=option_data.OfferId%></p>
+<p class="fl_left pushright20">OfferName:<%=option_data.OfferName%></p>
+<p class="fl_left pushright20">OfferPrice:<%=option_data.OfferPrice%></p>
+<p class="fl_left pushright20">Quantity:<%=option_data.Quantity%></p>
+<p class="fl_left pushright20">SumPrice:<%=option_data.SumPrice%></p>
+<table>	
+	<tr>
+<td>ProductId</td>
+<td>ProductName</td>
+<td>Price</td>
+<td>Quantity</td>
+<td>SumPrice</td>
+</tr>
+<% _.each(option_data.Products, function(Products, index){ %>	
+<tr>
+<td><%=Products.ProductId%></td>
+<td><%=Products.ProductName%></td>
+<td><%=Products.Price%></td>
+<td><%=Products.Quantity%></td>
+<td><%=Products.SumPrice%></td>
+</tr>
+  <% }) ;%>
+
+</table>
+  <% }) };%>
+</div>
+
+
+
+
+
+
+
+<div class="fl_left font-14 ">
+
+<%if(optionItem.Invoice.Tax != undefined){ _.each(optionItem.Invoice.Tax, function(option_data, index){ %>
+<h3>TAX</h3>
+<table>	
+	<tr>
+<td>Tax Name</td>
+<td>Tax Precentage</td>
+<td>Tax Amount</td>
+</tr>
+<tr>
+<td><%=option_data.TaxName%></td>
+<td><%=option_data.TaxPercentage%></td>
+<td><%=option_data.TaxAmount%></td>
+</tr>
+</table>
+  <% }) };%>
+
+</div>
+<div  class="fl_right font-20 pushleft20 seeorderpriceDetails" style="width:300px;">
+	<p>Actual Price: <span> <%=optionItem.Invoice.ActualPrice %></span></p>
+	<p>TotalTaxPrice: <span> <%=optionItem.Invoice.TotalTaxPrice %></span></p>
+	<p>ShippingPrice:<span>  <%=optionItem.Invoice.ShippingPrice %></span></p>
+	<p>DiscountAmount: <span> <%=optionItem.Invoice.DiscountAmount %></span></p>
+	<p>RedeemPoints:<span>  <%=optionItem.Invoice.RedeemPoints %></span></p>
+	<p>TotalPrice:<span>  <%=optionItem.Invoice.TotalPrice %></span></p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

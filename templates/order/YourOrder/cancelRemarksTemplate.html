@@ -1,0 +1,12 @@
+<form  class="reason clear canelStatus">
+<% _.each(optionItem, function(option_data, index){ %>
+<% _.each(option_data.CancelRemark, function(option_data, index){ %>
+<input type="radio" class="reasons" name="status" value="<%= option_data.Status%>"><%= option_data.Status%><br>
+
+
+
+  <% }) ;%>
+  <% }) ;%>
+</form>
+
+<button orderstatus="cancel"  class="red redclr-btn cancel assign_stat">cancel order with Reason</button>

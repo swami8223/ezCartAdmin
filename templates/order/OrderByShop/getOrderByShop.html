@@ -1,0 +1,35 @@
+<h1>Pending Order Tracking</h1>
+   <section class="Order-table getOrder">
+ <% _.each(optionItem.Notifications, function(option_data, index){ %>
+       <ul invoiceId=<%=option_data.InvoiceNo %> class="normal-items Pending <%=option_data.OrderStatus%>">
+       	  <li><h2>Delivery Type :<%=option_data.DeliveryType %></h2></li>
+       	<li>
+          <% if(option_data.AssignTo != null && option_data.AssignTo != '') {%>
+       		
+          Assign TO :<%=option_data.AssignTo %>
+
+          
+          <% } %></li>
+          
+         <!--  <% if(option_data.AssignTo == null ||  option_data.AssignTo == '') {%>
+       		 <button orderStatus="takeOrder" id="take-btn" class="red take_stat redclr-btn">take</button>
+          <% } %> -->
+
+
+      
+        <li invoiceId="<%=option_data.InvoiceNo %>" class="red get-invoice">see order</li>
+     
+       	<li>OrderStatus :<%=option_data.OrderStatus%></li>
+        <li> Invoice number : <%=option_data.InvoiceNo %></li> 
+        <li>User Id : <%=option_data.UserId %></li>
+        <li>UserName : <%=option_data.UserName %></li>
+      
+        <li>Invoice Date Time : <%=option_data.InvoiceDateTime %></li>
+        <li>ExpDelDateTime:<%=option_data.ExpDelDateTime %></li>
+        <li>Toal : Rs<%=option_data.TotalCost %></li>
+        
+       </ul>
+
+       <% });%>
+
+   </section>

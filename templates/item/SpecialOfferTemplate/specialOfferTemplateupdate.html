@@ -1,0 +1,62 @@
+
+<h1>EDIT SPECIAL OFFER</h1>
+<img id="offerImage" class="offerImage fl_right width180" src="images/sabari.png"></img>
+
+<label class="blk">Select Offer </label>
+<form class="offer_form">
+<select  required id="selectmenu" name = "MenuName" class="input-box pull-left" placeholder = "Menu" id="">
+	<optgroup>
+     <option 	disabled="disabled" value="Yes"> Select Offer </option>
+<% _.each(optionItem, function(option_data, index){ %>
+
+<%if(option_data.OfferNames){_.each(option_data.OfferNames, function(option_data, index){ %>
+
+<option value="<%= option_data.OfferId%>" ><%= option_data.OfferName %> </option>
+
+
+  <% });}%>
+  <% }) ;%></optgroup>
+</select> 
+<input type="reset"  id="resetOffer" style="width:20%" class="button red gradient pull-left " value="reset" >
+<input   required id="offer_id"  disabled="disabled" required name = "OfferId" class="input-box" placeholder = "Offer ID *"></input>
+<h1>Edit Special offer</h1>
+<label class="blk">Offer Name</label>
+<input  required id="Offer_name" required name = "OfferName" class="input-box" placeholder = "Offer Nmae *"></input>
+
+<label class="blk">Display Offer?</label>
+<select  required id="displayOffer" name = "ToShow" class="input-box"  id="">
+<optgroup >
+
+
+<option disabled="disabled" value="null"> Display Offer </option>
+<option value="Y"> Yes </option>
+<option value="N"> No </option>
+</optgroup>
+</select> 
+
+
+<div class="searchDiv">
+	<lable class="blk">Product Search</lable>
+	<input id="search-resulit" placeholder="Product search" type="text" class="product-search input-box"></input>
+	<input id="search-id" type="hidden">
+	
+	
+	
+    <ul class="searchResults">
+    	 </ul>
+</div>
+
+</form>
+
+<section class="Offer-Product"> </section>
+<p class="font-20 push20 showtext">Total:<span class="total-price"></span></p>
+<!-- <input type="submit"  id="create-offer" class="button red gradient size-50 pull-left  one_half" value="Create Offer"> -->
+<input type="submit" id="edit-offer" class="button red gradient size-50 pull-left one_half" value="Update Offer">
+
+
+	<div id="projects-list"></div>
+
+
+</div>	
+<div class="sidebar"></div>
+

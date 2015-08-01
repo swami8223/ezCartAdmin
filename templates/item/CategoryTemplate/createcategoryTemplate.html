@@ -1,0 +1,57 @@
+<div><h2>Create Category</h2>
+	
+
+
+<img id="categoryImage" class="categoryImage fl_right width180" src="images/sabari.png"></img>
+<label class="blk">Select Menu </label>
+<select  required id="selectmenu" name = "MenuName" class="input-box" placeholder = "Menu" id="">
+	<optgroup>
+     <option 	disabled="disabled" value="Yes"> Select Menu </option>
+ 
+
+ <% _.each(optionItem, function(option_data, index){ %>
+
+<%if(option_data.Menu){_.each(option_data.Menu, function(option_data, index){ %>
+
+<option toshow="" value="<%= option_data.MenuName.split('>')[1]%>$<%=option_data.ToShow%>$<%=option_data.MenuId%>$<%=option_data.ImageUrl%>$<%=option_data.ParentId%>$<%=option_data.TabIndex%>" ><%= option_data.MenuName %> </option>
+
+
+  <% });}%>
+  <% }) ;%>
+
+
+
+    </optgroup>
+</select> 
+<label class="blk">Menu Name</label>
+<input required id="Menu"  name = "Price" class="input-box" placeholder = "Menu Name *"></input> 
+<label class="blk">Menu Id</label>
+<input  id="MenuId" disabled  name = "Price" class="input-box" placeholder = "Menu Id *"></input> 
+<label class="blk">Index</label>
+<input required id="TabIndex"  name = "Price" class="input-box" placeholder = "Index"></input> 
+<div class="ParentDiv">
+
+</div>
+
+
+<label class="blk">Display Product ? </label>
+<select  required id="displayProduct" name = "ToShow" class="input-box"  id="">
+<optgroup >
+
+<option required value="null"	disabled="disabled" > Display Menu </option>
+<option value="Y"> Yes </option>
+<option value="N"> No </option>
+</optgroup>
+</select> 
+
+<input type="submit"  id="create-menu" class="button red gradient size-50 pull-left  one_half" value="Create Category">
+<!-- <input type="submit" id="edit-menu" class="button grey gradient size-50 pull-left one_half" value="Update Category"> -->
+
+
+
+
+
+
+</div>	
+<div class="sidebar"></div>
+

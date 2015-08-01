@@ -1,0 +1,56 @@
+<h1>Pending Order Tracking</h1>
+   <section class="Order-table pendingOrder">
+ <% _.each(optionItem, function(option_data, index){ %>
+       <ul invoiceId=<%=option_data.InvoiceNo %> class="normal-items Pending <%=option_data.OrderStatus%>">
+       	  <li><h2>Delivery Type :<%=option_data.DeliveryType %></h2></li>
+       	<li>
+          <% if(option_data.AssignTo != null && option_data.AssignTo != '') {%>
+       		
+          Assign TO :<%=option_data.AssignTo %>
+<!-- 
+           <% if(option_data.OrderStatus === 'Pending') {%>
+          <input class="billno" placeholder="Bill no"></input>
+            <button orderStatus="billNo" id="assign_bil" class="red redclr-btn assign_stat">Assign Bill</button>
+       		 <% } %>
+          <% if(option_data.OrderStatus != 'Pending') {%>
+          <input disabled class="billno" placeholder="Bill no" value='<%=option_data.BillNo%>'></input>
+           <% } %>
+
+          <% if(option_data.OrderStatus === "Ready For Delivery"){%>
+          <button orderStatus="Delivered" class="red redclr-btn assign_stat">Delivered</button>
+
+          <% } %>
+          
+          <% if(option_data.OrderStatus === "Bill Generated"){%>
+         <button orderStatus="ReadyDelivery" class="red redclr-btn assign_stat">Ready Delivery</button>
+          <% } %>
+          
+        
+          <button orderStatus="cancel" id="assign_stat" class="red redclr-btn cancel">cancel</button>
+               -->
+          
+          <% } %>
+          
+          <% if(option_data.AssignTo == null ||  option_data.AssignTo == '') {%>
+       		 <button orderStatus="takeOrder" id="take-btn" class="red take_stat redclr-btn">take</button>
+          <% } %>
+
+
+       	</li>
+        <% if(option_data.AssignTo != null &&  option_data.AssignTo != '') {%>
+        <li invoiceId="<%=option_data.InvoiceNo %>" class="red get-invoice">see order</li>
+        <% } %>
+       	<li>OrderStatus :<%=option_data.OrderStatus%></li>
+        <li> Invoice number : <%=option_data.InvoiceNo %></li> 
+        <li>User Id : <%=option_data.UserId %></li>
+        <li>UserName : <%=option_data.UserName %></li>
+      
+        <li>Invoice Date Time : <%=option_data.InvoiceDateTime %></li>
+        <li>ExpDelDateTime:<%=option_data.ExpDelDateTime %></li>
+        <li>Toal : Rs<%=option_data.TotalCost %></li>
+        
+       </ul>
+
+       <% });%>
+
+   </section>
